@@ -1,0 +1,118 @@
+extends layout
+
+block content
+  .row.page-header(style="margin-bottom: 20px;")
+    .col-lg-12
+      h1(style="margin-top: 20px;") Kanyakumari
+
+  .row
+    .col-xs-12.col-md-9
+      .row
+        .col-xs-14.col-sm-16
+          h2(style="font-size: 24px;") Kanyakumari
+          p.rating
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star
+            span.glyphicon.glyphicon-star-empty
+          p Southernmost point of India, Land of the Sunrise
+          .panel.panel-primary
+            .panel-heading
+              h2.panel-title About Kanyakumari
+            .panel-body
+              p Kanyakumari, located at the southern tip of India, is a famous tourist destination known for its breathtaking sunrise and sunset views over the waters. It is also a cultural hub, blending history, spirituality, and natural beauty.
+              p Major attractions include the Vivekananda Rock Memorial, Thiruvalluvar Statue, and the pristine Kanyakumari Beach, making it a perfect spot for sightseeing, spiritual reflection, and relaxation.
+
+          // Add images of Kanyakumari here
+          .row.images
+            .col-xs-12
+              h3(style="font-size: 24px;") Vivekananda Rock Memorial
+              img(src='/images/Vivekananda-Rock-Memorial.jpg', alt='Vivekananda Rock Memorial', style='width:100%; height:auto;')
+              p(style="font-size: 18px;") The Vivekananda Rock Memorial stands on a small island, a serene place for meditation and reflection. It's known for its spiritual significance and panoramic ocean views.
+
+            .col-xs-12
+              h3(style="font-size: 24px;") Thiruvalluvar Statue
+              img(src='/images/Thiruvalluvar-Statue.jpg', alt='Thiruvalluvar Statue', style='width:100%; height:auto;')
+              p(style="font-size: 18px;") The iconic Thiruvalluvar Statue, standing 133 feet tall, honors the famous Tamil poet and philosopher. Visitors can reach the statue by boat and enjoy the scenic views of the Indian Ocean.
+
+            // New image 1
+            .col-xs-12
+              h3(style="font-size: 24px;") Kanyakumari Beach
+              img(src='/images/Kanyakumari-Beach.jpg', alt='Kanyakumari Beach', style='width:100%; height:auto;')
+              p(style="font-size: 18px;") Kanyakumari Beach is renowned for its stunning views of both sunrise and sunset. The beach is a peaceful escape, perfect for a relaxing stroll along the shores.
+
+            // New image 2
+            .col-xs-12
+              h3(style="font-size: 24px;") Manimuthar Waterfalls
+              img(src='/images/Manimuthar-Waterfalls.jpg', alt='Manimuthar Waterfalls', style='width:100%; height:auto;')
+              p(style="font-size: 18px;") Our Lady of Ransom Church is a beautiful white Gothic-style structure located near the shore. It's a serene place of worship, offering peace and solace to visitors.
+
+            // New image 3
+            .col-xs-12
+              h3(style="font-size: 24px;") Padmanabhapuram Palace
+              img(src='/images/Padmanabhapurampalace.jpg', alt='Padmanabhapuram Palace', style='width:100%; height:auto;')
+              p(style="font-size: 18px;") The Padmanabhapuram Palace is a stunning example of traditional Kerala architecture, showcasing intricate woodwork, murals, and artifacts from a bygone era.
+
+            // New image 4
+            .col-xs-12
+              h3(style="font-size: 24px;")  Courtallam Waterfalls
+              img(src='/images/Courtallam-Waterfalls.jpg', alt=' Courtallam Waterfalls', style='width:100%; height:auto;')
+              p(style="font-size: 18px;") The Tsunami Memorial stands as a tribute to those who lost their lives during the 2004 tsunami. The monument is both a place of remembrance and a spot to reflect on the strength of nature.
+
+      .row
+        .col-xs-20
+          .panel.panel-primary.review-panel
+            .panel-heading
+              a.btn.btn-default.pull-right(href='/location/review/new') Add review
+              h2.panel-title Reviews
+            .panel-body.review-container
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                    span.reviewAuthor Pavan Yata
+                    small.reviewTimestamp 22 September 2024
+                  .col-xs-12
+                    p Kanyakumari's sunrise views were absolutely mesmerizing! The Vivekananda Rock Memorial was a peaceful and spiritual experience.
+
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star-empty
+                    span.reviewAuthor Kotha Tejesh
+                    small.reviewTimestamp 20 September 2024
+                  .col-xs-12
+                    p Loved the cultural vibe of Kanyakumari. The Thiruvalluvar Statue and the boat ride were amazing! A must-visit for history enthusiasts.
+
+              .row
+                .review
+                  .well.well-sm.review-header
+                    span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star-empty
+                      span.glyphicon.glyphicon-star-empty
+                    span.reviewAuthor Vinay Paul
+                    small.reviewTimestamp 18 September 2024
+                  .col-xs-12
+                    p The beach was beautiful but crowded. However, the sunset and the peaceful atmosphere at the church made it worthwhile.
+
+    // Move location map to the right side upper corner
+    .col-xs-12.col-md-3
+      .panel.panel-primary.location-map
+        .panel-heading
+          h2.panel-title Location map
+        .panel-body
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15689.092946730873!2d77.53850406879205!3d8.084121894964963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b048a48fa07ea17%3A0x681e4f7fd7e2149e!2sKanyakumari%2C%20Tamil%20Nadu%2C%20India!5e1!3m2!1sen!2sin!4v1727204899896!5m2!1sen!2sin" width="220" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
