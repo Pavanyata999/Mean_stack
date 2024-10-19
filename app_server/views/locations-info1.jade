@@ -8,7 +8,7 @@ block content
   .row
     .col-xs-12.col-md-9
       .row
-        .col-xs-14.col-sm-16
+        .col-xs-12.col-sm-12
           h2(style="font-size: 24px;") Munnar
           p.rating
             span.glyphicon.glyphicon-star
@@ -24,7 +24,7 @@ block content
               p Munnar, located in the Idukki district of Kerala, is famous for its tea plantations, rolling hills, and cool climate. This hill station is surrounded by mist-covered mountains, and it's a popular destination for trekking, sightseeing, and relaxation.
               p Attractions include Eravikulam National Park, Anamudi Peak, and the tea estates that cover the region, offering visitors a chance to explore lush greenery and exotic wildlife.
 
-          // Add images of Munnar here
+          // Images of Munnar locations
           .row.images
             .col-xs-12
               h3(style="font-size: 24px;") Pothamedu Viewpoint
@@ -33,38 +33,34 @@ block content
 
             .col-xs-12
               h3(style="font-size: 24px;") Lockhart Gap
-              img(src='/images/lock hart gap.jpg', alt='Lock Hart Gap', style='width:100%; height:auto;')
+              img(src='/images/lockhart-gap.jpg', alt='Lock Hart Gap', style='width:100%; height:auto;')
               p(style="font-size: 18px;") Lockhart Gap is known for its captivating landscapes and serene ambiance. Visitors can enjoy breathtaking views of the mountains and valleys, making it a perfect spot for nature lovers.
 
-            // New image 1
             .col-xs-12
               h3(style="font-size: 24px;") Anayirangal Dam
               img(src='/images/Anayirangal-Dam.jpg', alt='Anayirangal Dam', style='width:100%; height:auto;')
               p(style="font-size: 18px;") Anayirangal Dam is surrounded by tea plantations and offers a scenic view of the reservoir and nearby hills. It's a peaceful place to relax and enjoy nature.
 
-            // New image 2
             .col-xs-12
               h3(style="font-size: 24px;") Attukal Waterfalls
               img(src='/images/Attukal-Waterfalls.jpg', alt='Attukal Waterfalls', style='width:100%; height:auto;')
               p(style="font-size: 18px;") Attukal Waterfalls is a beautiful cascade set amidst lush greenery. It's an ideal spot for trekking and enjoying the fresh mountain air.
 
-            // New image 3
             .col-xs-12
               h3(style="font-size: 24px;") Top Station
               img(src='/images/topstations.jpg', alt='Top Station', style='width:100%; height:auto;')
               p(style="font-size: 18px;") Top Station, located on the Kerala-Tamil Nadu border, offers breathtaking views of the Western Ghats. It's a popular destination for visitors who enjoy panoramic vistas.
 
-            // New image 4
             .col-xs-12
               h3(style="font-size: 24px;") Lakkom Waterfalls
               img(src='/images/Lakkom-Waterfalls.jpg', alt='Lakkom Waterfalls', style='width:100%; height:auto;')
               p(style="font-size: 18px;") Lakkom Waterfalls is a stunning waterfall located in a picturesque setting. The falls are surrounded by tea estates, making it a favorite spot for visitors to relax and enjoy the scenery.
 
       .row
-        .col-xs-20
+        .col-xs-12
           .panel.panel-primary.review-panel
             .panel-heading
-              a.btn.btn-default.pull-right(href='/location/review/new') Add review
+              a.btn.btn-default.pull-right(href='http://localhost:3000/review') Add review
               h2.panel-title Reviews
             .panel-body.review-container
               .row
@@ -109,10 +105,11 @@ block content
                   .col-xs-12
                     p It was a good trip overall, but some areas were a bit crowded. The scenic spots were beautiful though.
 
-    // Move location map to the right side upper corner
+    // Location map moved to the right side upper corner
     .col-xs-12.col-md-3
       .panel.panel-primary.location-map
         .panel-heading
           h2.panel-title Location map
         .panel-body
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25901.733002907076!2d77.04357825834543!3d10.08064891183514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0799794d099a6d%3A0x63250e5553c7e0c!2sMunnar%2C%20Kerala%20685612!5e1!3m2!1sen!2sin!4v1727204899896!5m2!1sen!2sin" width="220" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25901.733002907076!2d77.04357825834543!3d10.08064891183514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0799794d099a6d%3A0x63250e5553c7e0c!2sMunnar%2C%20Kerala%20685612!5e1!3m2!1sen!2sin!4v1727204899896!5m2!1sen!2sin", width="220", height="320", style="border:0;", allowfullscreen="", loading="lazy", referrerpolicy="no-referrer-when-downgrade")
+

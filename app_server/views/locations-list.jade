@@ -1,26 +1,43 @@
-extends layout 
+extends layout
 include _includes/sharedHTMLfunctions 
 
 block content 
+  // Background video at the top
+  video#background-video(autoplay muted loop playsinline style="width:100%; height:auto;")
+    source(src="/images/backgroundvideo.mp4", type="video/mp4")
+    source(src="/images/backgroundvideo.webm", type="video/webm")
+    // Fallback text for browsers that do not support the video tag
+    | Your browser does not support the video tag.
+
+  // Page header with title and strapline
   #banner.page-header 
     .row 
       .col-lg-6 
         h1= pageHeader.title 
         small &nbsp;#{pageHeader.strapline} 
+
+  // Locations listing
   .row 
     .col-xs-12.col-sm-8 
       .row.list-group 
         each location, index in locations 
           .col-xs-12.list-group-item 
             h4  
-              // Create dynamic links based on the index of the location
+              // Dynamic link for each location based on its index
               a(href=`/location${index + 1}`)= location.name 
               small &nbsp; 
-                outputRating(location.rating) 
+                outputRating(location.rating) // Function to render the rating dynamically
               span.badge.pull-right.badge-default= location.distance 
+            
+            // Address of the location
             p.address= location.address 
+            
+            // Facilities associated with the location
             p 
               each facility in location.facilities 
                 span.label.label-warning= facility 
                 | &nbsp; 
-    .col-xs-12.col-sm-4 
+
+  // Optional sidebar or additional content
+  .col-xs-12.col-sm-4
+    // Add your sidebar content or other elements here if needed

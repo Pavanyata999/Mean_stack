@@ -1,16 +1,24 @@
-// models/db.js
 const mongoose = require('mongoose');
-const dbURI = 'mongodb://localhost:27017/loc8r'; 
-mongoose.connect(dbURI);
+
+// MongoDB Cluster connection string with your username and password
+const dbURI = 'mongodb+srv://22eg106a62:Pavanyata123@cluster0.mongodb.net/wpm?retryWrites=true&w=majority'; 
+
+mongoose.connect(dbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 mongoose.connection.on('connected', () => {
-  console.log(`Mongoose connected to ${dbURI}`); 
+  console.log(`Mongoose connected to ${dbURI}`);
 });
+
 mongoose.connection.on('error', err => { 
   console.log('Mongoose connection error:', err);
 });
+
 mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
-require('./locations'); // Ensure this is pointing to the correct location
+// Load your models (ensure paths are correct)
+require('./locations'); 
